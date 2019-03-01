@@ -17,6 +17,7 @@ const HomeComponent = props => {
               title={item.name.last}
               subtitle={item.name.first}
               leftAvatar={{ source: { uri: item.picture.thumbnail } }}
+              onPress={ () => console.log(item.name.first)}
             />
           )}
         />
