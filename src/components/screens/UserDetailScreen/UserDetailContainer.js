@@ -13,8 +13,8 @@ export class UserDetailContainer extends Component {
         <UserDetailComponent
           lastname={data.name.last}
           firstname={data.name.first}
+          thumbnail={data.picture.thumbnail}
         />
-        {/* <Text>{data.name.last}</Text> */}
       </View>
     );
   }

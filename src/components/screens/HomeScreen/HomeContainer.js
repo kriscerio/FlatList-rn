@@ -12,7 +12,7 @@ export class HomeContainer extends Component {
     this.fetchData();
   }
 
-  handlePressItem = item => {
+  onPressUserDetail = item => {
     this.props.navigation.navigate("UserDetail", { item });
   };
 
@@ -26,7 +26,7 @@ export class HomeContainer extends Component {
     return (
       <HomeComponent
         data={this.state.data}
-        onPressItem={this.handlePressItem}
+        onPressItem={this.onPressUserDetail}
       />
     );
   }

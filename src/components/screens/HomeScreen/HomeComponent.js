@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Text, View, FlatList } from "react-native";
 import Header from "./../../common/Header";
 import { ListItem } from "react-native-elements";
-// import { StackNavigator } from "react-navigation";
 
 const HomeComponent = props => {
   return (
