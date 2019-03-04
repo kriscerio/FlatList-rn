@@ -19,8 +19,10 @@ export class HomeContainer extends Component {
   };
 
   render() {
-    console.log(this.state.data);
-    return <HomeComponent data={this.state.data} />;
+    console.log(this.props);
+    return <HomeComponent data={this.state.data}
+    navigation={this.props.navigation}
+     />;
   }
 }
 

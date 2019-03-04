@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Text, View, FlatList } from "react-native";
 import Header from "./../../common/Header";
 import { ListItem } from "react-native-elements";
+// import { StackNavigator } from "react-navigation";
 
 const HomeComponent = props => {
   return (
     <View>
-      <Header title="Header" />
       <View>
         <FlatList
           data={props.data}
@@ -17,7 +17,8 @@ const HomeComponent = props => {
               title={item.name.last}
               subtitle={item.name.first}
               leftAvatar={{ source: { uri: item.picture.thumbnail } }}
-              onPress={ () => console.log(item.name.first)}
+              // onPress={() => console.log(item.name.first)}
+              onPress={() => props.navigation.navigate('UserDetail',{title,subtitle})}
             />
           )}
         />
@@ -31,10 +32,10 @@ const styles = {
     marginTop: 5,
     marginLeft: 5,
     marginRight: 5,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: "#f8f8f8",
     borderRadius: 4,
     borderWidth: 0.5,
-    borderColor: '#24292e'
+    borderColor: "#24292e"
   }
 };
 
