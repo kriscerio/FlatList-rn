@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Text, View } from "react-native";
+import UserDetailConTainer from "./UserDetailContainer";
 
-const UserDetailComponent = () => {
+const UserDetailComponent = props => {
   return (
     <View>
-      <Text> textInComponent </Text>
+      <Text>{props.lastname}</Text>
     </View>
   );
 };

@@ -12,6 +12,10 @@ export class HomeContainer extends Component {
     this.fetchData();
   }
 
+  handlePressItem = item => {
+    this.props.navigation.navigate("UserDetail", { item });
+  };
+
   fetchData = async () => {
     const response = await fetch("https://randomuser.me/api/?results=100");
     const json = await response.json();
@@ -19,10 +23,12 @@ export class HomeContainer extends Component {
   };
 
   render() {
-    console.log(this.props);
-    return <HomeComponent data={this.state.data}
-    navigation={this.props.navigation}
-     />;
+    return (
+      <HomeComponent
+        data={this.state.data}
+        onPressItem={this.handlePressItem}
+      />
+    );
   }
 }
 
