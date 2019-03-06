@@ -2,22 +2,27 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   avatar: {
-    width: 130,
-    height: 130,
-    borderRadius: 63,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
     borderWidth: 4,
-    borderColor: "white",
-    marginBottom: 10,
-    alignSelf: "center",
-    position: "absolute",
-    marginTop: 130
+    borderColor: "white"
+  },
+  containerAvatarName: {
+    flexDirection: "row",
+    backgroundColor: "#F5F5F5",
+    height: 150
   },
   containerStyle: {
-    backgroundColor: "#F5F5F5",
-    flex: 1
+    // flex: 1,
+    backgroundColor: "red"
   },
   nameTextStyle: {
     fontSize: 20
+  },
+  tabContainer: {
+    flexDirection: "row",
+    justifyContent: "space-evenly"
   }
 });
 

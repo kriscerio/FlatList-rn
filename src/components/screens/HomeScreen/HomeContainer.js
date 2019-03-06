@@ -17,7 +17,7 @@ export class HomeContainer extends Component {
   };
 
   fetchData = async () => {
-    const response = await fetch("https://randomuser.me/api/?results=100");
+    const response = await fetch("https://randomuser.me/api/?results=10");
     const json = await response.json();
     this.setState({ data: json.results });
   };
