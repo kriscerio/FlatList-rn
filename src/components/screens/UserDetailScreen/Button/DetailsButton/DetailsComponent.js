@@ -4,15 +4,25 @@ import { Button } from "react-native-elements";
 import styles from "./styles";
 
 const DetailsComponent = props => {
-  return (
-    <View>
-      <Button title="Details" type="clear" onPress={props.onPress} />
-      {!props.detail && (
+  if ((props.detail = true)) {
+    return (
+      <View>
+        <Button title="Details" type="clear" onPress={props.onPress} />
         <Text style={styles.container}>111123123123123123123</Text>
-      )}
+      </View>
+    );
+  } else {
+    return null;
+  }
+  // return (
 
-    </View>
-  );
+  //   // <View>
+  //   //   <Button title="Details" type="clear" onPress={props.onPress} />
+  //   //   {props.detail && (
+  //   //     <Text style={styles.container}>111123123123123123123</Text>
+  //   //   )}
+  //   // </View>
+  // );
 };
 
 export default DetailsComponent;

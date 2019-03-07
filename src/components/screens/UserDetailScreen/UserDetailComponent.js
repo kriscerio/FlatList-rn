@@ -6,6 +6,10 @@ import DetailsComponent from "./Button/DetailsButton/DetailsComponent";
 import styles from "./styles";
 
 const UserDetailComponent = props => {
+  // if (props.detail=true) {
+
+  // }
+
   return (
     <View>
       <View style={styles.containerAvatarName}>
@@ -15,8 +19,16 @@ const UserDetailComponent = props => {
         }`}</Text>
       </View>
       <View style={styles.tabContainer}>
-        <DetailsComponent detail={props.detail} onPress={props.onPress} />
-        <CallLogComponent detail={props.detail} onPress={props.onPress} />
+        <DetailsComponent
+          detail={props.detail}
+          onPress={props.onPress}
+          // onPressDetail={props.onPressDetail}
+        />
+        <CallLogComponent
+          detail={props.detail}
+          onPress={props.onPress}
+          // onPressCallLog={props.onPressCallLog}
+        />
       </View>
     </View>
   );

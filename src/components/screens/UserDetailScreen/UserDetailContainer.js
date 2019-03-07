@@ -7,17 +7,46 @@ import styles from "./styles";
 
 export class UserDetailContainer extends Component {
   state = {
-    isVisible: true
+    isVisible: true,
+    detailTab: true,
+    callLogTab: false
   };
 
   onPress = () => {
-    this.setState({ isVisible: false });
+    // const visibility = this.setState({ isVisible: !this.state.isVisible });
+    console.log(this.state.isVisible);
   };
+
+  // toggleView() {
+  //   if (this.state.isVisible=true) {
+  //     this.state({
+  //       isVisible: false
+  //     })
+  //   }else {
+  //     this.state({
+  //       isVisible: true
+  //     })
+  //   }
+  // }
+  onPressDetail = () => {
+    if (this.state.isVisible=true) {
+      this.state({
+        isVisible: true
+      })
+    }
+  }
+
+  onPressCallLog = () => {
+    if (this.state.isVisible) {
+      this.state({
+        isVisible: false
+      })
+    }
+  }
 
   render() {
     const { navigation } = this.props;
     const data = navigation.getParam("item");
-    console.log(data);
     return (
       <View>
         <UserDetailComponent
@@ -26,6 +55,8 @@ export class UserDetailContainer extends Component {
           thumbnail={data.picture.thumbnail}
           detail={this.state.isVisible}
           onPress={this.onPress}
+          onPressDetail={this.onPressDetail}
+          onPressCallLog={this.onPressCallLog}
         />
       </View>
     );
