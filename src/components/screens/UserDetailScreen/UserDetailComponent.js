@@ -6,28 +6,25 @@ import DetailsComponent from "./Button/DetailsButton/DetailsComponent";
 import styles from "./styles";
 
 const UserDetailComponent = props => {
-  // if (props.detail=true) {
-
-  // }
-
   return (
     <View>
       <View style={styles.containerAvatarName}>
         <Image style={styles.avatar} source={{ uri: props.thumbnail }} />
         <Text style={styles.nameTextStyle}>{`${props.firstname} ${
-          props.lastname
-        }`}</Text>
+          props.lastname}`}</Text>
       </View>
       <View style={styles.tabContainer}>
         <DetailsComponent
-          detail={props.detail}
-          onPress={props.onPress}
+          detailTab={props.detailTab}
+          callLogTab={props.callLogTab}
           onPressDetail={props.onPressDetail}
+          visible={props.visible}
         />
         <CallLogComponent
-          detail={props.detail}
-          onPress={props.onPress}
+          detailTab={props.detailTab}
+          callLogTab={props.callLogTab}
           onPressCallLog={props.onPressCallLog}
+          visible={props.visible}
         />
       </View>
     </View>

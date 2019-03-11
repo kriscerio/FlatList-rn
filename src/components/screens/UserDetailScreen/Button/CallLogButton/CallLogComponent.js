@@ -4,24 +4,15 @@ import { Button } from "react-native-elements";
 import styles from "./styles";
 
 const CallLogComponent = props => {
-  if ((props.detail = true)) {
-    return (
-      <View>
-        <Button title="Call Logs" type="clear" onPress={props.onPressCallLog} />
-        <Text style={styles.container}>asdlfkjla;sdlfkajsd;fljk</Text>
-      </View>
-    );
-  } else {
-    return null;
-  }
-  //   return (
-  //     <View>
-  //       <Button title="Call Log" type="clear" onPress={props.onPress} />
-  //       {!props.detail && (
-  //         <Text style={styles.container}>a;dlskfja;lskdfj;alskdjf;alskdjf</Text>
-  //       )}
-  //     </View>
-  //   );
-  // };
+  return (
+    <View>
+      <Button title="Call Logs" type="clear" onPress={props.onPressCallLog} />
+      {
+        props.callLogTab ? (
+          <Text>asdfasdfasdfasdfasdfasdf</Text>
+        ): null
+      }
+    </View>
+  )
 };
 export default CallLogComponent;

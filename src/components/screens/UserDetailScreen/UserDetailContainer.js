@@ -9,7 +9,7 @@ export class UserDetailContainer extends Component {
   state = {
     isVisible: true,
     detailTab: true,
-    callLogTab: false
+    callLogTab: true
   };
 
   onPress = () => {
@@ -17,32 +17,19 @@ export class UserDetailContainer extends Component {
     console.log(this.state.isVisible);
   };
 
-  // toggleView() {
-  //   if (this.state.isVisible=true) {
-  //     this.state({
-  //       isVisible: false
-  //     })
-  //   }else {
-  //     this.state({
-  //       isVisible: true
-  //     })
-  //   }
-  // }
   onPressDetail = () => {
-    // if (this.state.isVisible=true) {
-    //   this.state({
-    //     isVisible: true
-    //   })
-    // }
+    this.setState({
+      detailTab: true,
+      callLogTab: false
+    });
     console.log("onPressDetail");
   };
 
   onPressCallLog = () => {
-    // if (this.state.isVisible) {
-    //   this.state({
-    //     isVisible: false
-    //   });
-    // }
+    this.setState({
+      detailTab: false,
+      callLogTab: true
+    });
     console.log("onPressCallLog");
   };
 
@@ -55,7 +42,8 @@ export class UserDetailContainer extends Component {
           lastname={data.name.last}
           firstname={data.name.first}
           thumbnail={data.picture.thumbnail}
-          detail={this.state.isVisible}
+          detailTab={this.state.detailTab}
+          callLogTab={this.state.callLogTab}
           onPress={this.onPress}
           onPressDetail={this.onPressDetail}
           onPressCallLog={this.onPressCallLog}
