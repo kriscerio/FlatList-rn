@@ -22,12 +22,12 @@ const UserDetailComponent = props => {
         <DetailsComponent
           detail={props.detail}
           onPress={props.onPress}
-          // onPressDetail={props.onPressDetail}
+          onPressDetail={props.onPressDetail}
         />
         <CallLogComponent
           detail={props.detail}
           onPress={props.onPress}
-          // onPressCallLog={props.onPressCallLog}
+          onPressCallLog={props.onPressCallLog}
         />
       </View>
     </View>

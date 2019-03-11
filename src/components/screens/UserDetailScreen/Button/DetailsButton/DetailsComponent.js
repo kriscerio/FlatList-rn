@@ -7,7 +7,7 @@ const DetailsComponent = props => {
   if ((props.detail = true)) {
     return (
       <View>
-        <Button title="Details" type="clear" onPress={props.onPress} />
+        <Button title="Details" type="clear" onPress={props.onPressDetail} />
         <Text style={styles.container}>111123123123123123123</Text>
       </View>
     );

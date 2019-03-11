@@ -29,20 +29,22 @@ export class UserDetailContainer extends Component {
   //   }
   // }
   onPressDetail = () => {
-    if (this.state.isVisible=true) {
-      this.state({
-        isVisible: true
-      })
-    }
-  }
+    // if (this.state.isVisible=true) {
+    //   this.state({
+    //     isVisible: true
+    //   })
+    // }
+    console.log("onPressDetail");
+  };
 
   onPressCallLog = () => {
-    if (this.state.isVisible) {
-      this.state({
-        isVisible: false
-      })
-    }
-  }
+    // if (this.state.isVisible) {
+    //   this.state({
+    //     isVisible: false
+    //   });
+    // }
+    console.log("onPressCallLog");
+  };
 
   render() {
     const { navigation } = this.props;

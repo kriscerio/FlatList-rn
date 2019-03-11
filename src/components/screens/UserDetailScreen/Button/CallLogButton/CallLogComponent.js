@@ -7,7 +7,7 @@ const CallLogComponent = props => {
   if ((props.detail = true)) {
     return (
       <View>
-        <Button title="Call Logs" type="clear" onPress={props.onPress} />
+        <Button title="Call Logs" type="clear" onPress={props.onPressCallLog} />
         <Text style={styles.container}>asdlfkjla;sdlfkajsd;fljk</Text>
       </View>
     );
